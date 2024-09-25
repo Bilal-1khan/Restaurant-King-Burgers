@@ -156,6 +156,9 @@
     width: 50rem;
     padding: 1rem;
 }
+.abt-btns{
+    display: flex;
+}
 .abt_btns{
     padding: .6rem 1.8rem;
     text-transform: capitalize;
@@ -196,7 +199,11 @@
     margin-bottom: 1.5rem;
 }
 .menu-btns{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
 }
 .menu_btns{
     padding: .8rem 1.4rem;
@@ -274,6 +281,7 @@
 .counter_box{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     gap: 1rem;
     margin: 3rem 0px;
 }

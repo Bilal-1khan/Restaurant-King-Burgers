@@ -15,7 +15,7 @@ const screenInitial_Height = 0;
 
 window.addEventListener("scroll", function () {
   const scrollHeight = this.scrollY;
-  
+
   if (scrollHeight > navbar_hegiht) {
     navbar.classList.add("nav_fixed");
   }
@@ -217,23 +217,21 @@ function menuButtons() {
 const updateCounter = document.querySelectorAll(".update_counter");
 let speedCounter = 50;
 
-
-
 updateCounter.forEach((counter) => {
   let initialCount = Number(counter.innerHTML);
   const counterNumber = Number(counter.getAttribute("data-count"));
   const counterIncreement = Math.floor(counterNumber / speedCounter);
 
-  function countIncreement () {
+  function countIncreement() {
     initialCount = initialCount + counterIncreement;
     counter.innerHTML = initialCount;
-    
-    setTimeout(()=>{
-      if(initialCount<counterNumber){
-        countIncreement()
-      }},50)
-  };
-  countIncreement()
 
+    setTimeout(() => {
+      if (initialCount < counterNumber) {
+        countIncreement();
+      }
+    }, 50);
+  }
+  countIncreement();
 });
 // menu functionality section end//
