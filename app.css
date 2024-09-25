@@ -271,3 +271,20 @@
 .price{
     font-weight: bold;
 }
+.counter_box{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 3rem 0px;
+}
+.counter{
+    color: #fff;
+    text-align: center;
+}
+.counter h1{
+    font-size: 6rem;
+}
+.counter p{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
