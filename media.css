@@ -27,7 +27,19 @@
         gap: 1rem;
     }
 }
-
+@media screen and (max-width:600px) {
+    .responsive_menu{
+        display: block;
+    }
+    .responsive_menu i{
+        font-size: 1.8rem;
+        color: red;
+        cursor: pointer;
+    }
+    .menu_list{
+        display: none;
+    }
+}
 @media screen and (max-width:270px) {
     .menu_card ,.burger_image{
         width: 100%;

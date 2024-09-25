@@ -78,6 +78,11 @@
     align-items: center;
     gap: 1.5rem;
 }
+.icon{
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
 .icon i{
     font-size: 4rem;
     color: var(--menuItemsFont); 
@@ -93,6 +98,9 @@
     color: var(--menuItemsFont);
     font-weight: bold;
     text-transform: uppercase;
+}
+.responsive_menu{
+    display: none;
 }
 .vid_btns{
     position: absolute;
