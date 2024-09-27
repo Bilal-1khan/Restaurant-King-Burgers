@@ -138,6 +138,7 @@ const burgerItems = [
 ];
 const gridContainer = document.querySelector(".grid_menu");
 const searchItems = document.getElementById("search");
+console.log(gridContainer);
 
 window.addEventListener("DOMContentLoaded", function () {
   menuItems(burgerItems);
@@ -188,29 +189,45 @@ function menuButtons() {
       const targetBtn = event.currentTarget.textContent;
       if (targetBtn === "All") {
         menuItems(burgerItems);
-      } else if (targetBtn === "Cheese Burger") {
+      } else if (
+        targetBtn === "Cheese Burger" ||
+        targetBtn === "Veggie Burger" ||
+        targetBtn === "Turkey Burger" ||
+        targetBtn === "Classic Burger"
+      ) {
         let filterData = burgerItems.filter((items) => {
-          return items.name.includes("Cheese Burger");
-        });
-        menuItems(filterData);
-      } else if (targetBtn === "Veggie Burger") {
-        let filterData = burgerItems.filter((items) => {
-          return items.name.includes("Veggie Burger");
-        });
-        menuItems(filterData);
-      } else if (targetBtn === "Turkey Burger") {
-        let filterData = burgerItems.filter((items) => {
-          return items.name.includes("Turkey Burger");
-        });
-        menuItems(filterData);
-      } else if (targetBtn === "Classic Burger") {
-        let filterData = burgerItems.filter((items) => {
-          return items.name.includes("Classic Burger");
+          return items.name.includes(targetBtn);
         });
         menuItems(filterData);
       }
     });
   });
+}
+
+// search functionality of menu cards
+
+const menuSearch_Items = document.getElementById("search");
+
+menuSearch_Items.addEventListener("keyup", function (event) {
+  console.log(event.target.value);
+  let targetedItem = event.target.value;
+  searchItemFunction(targetedItem);
+});
+
+function searchItemFunction(search) {
+  if (
+    search === "Cheese Burger" ||
+    search === "Veggie Burger" ||
+    search === "Turkey Burger" ||
+    search === "Classic Burger"
+  ) {
+    let searchFilter = burgerItems.filter((items) => {
+      return items.name.includes(search);
+    });
+    menuItems(searchFilter);
+  } else {
+    console.log("not working");
+  }
 }
 
 // menu counter update functionality
@@ -235,3 +252,5 @@ updateCounter.forEach((counter) => {
   countIncreement();
 });
 // menu functionality section end//
+
+// carousel slider functionality
