@@ -40,6 +40,14 @@
         display: none;
     }
 }
+@media screen and (max-width:455px){
+    .menu_card, .burger_image{
+        width: 100%;
+    }
+    .burger_image{
+        height: auto;
+    }
+}
 @media screen and (max-width:270px) {
     .menu_card ,.burger_image{
         width: 100%;
