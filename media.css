@@ -6,7 +6,7 @@
 }
 @media screen and (max-width:700px) {
     html{
-        font-size: 43.75%;
+        font-size: 50%;
     }
 }
 /* font size media ends here */
@@ -40,7 +40,7 @@
         display: none;
     }
 }
-@media screen and (max-width:455px){
+@media screen and (max-width:520px){
     .menu_card, .burger_image{
         width: 100%;
     }
@@ -48,8 +48,25 @@
         height: auto;
     }
 }
-@media screen and (max-width:270px) {
-    .menu_card ,.burger_image{
-        width: 100%;
-    }
+
+/* carousel slider media query */
+@media only screen and (min-width: 1100px) {
+	#slider-container #slider .slide {
+		width: calc(2.5% - 20px);
+	}
+}
+@media only screen and (max-width: 1100px) {
+	#slider-container #slider .slide {
+		width: calc(3.3333333% - 20px);
+	}
+}
+@media only screen and (max-width: 900px) {
+	#slider-container #slider .slide {
+		width: calc(5% - 20px);
+	}
+}
+@media only screen and (max-width: 550px) {
+	#slider-container #slider .slide {
+		width: calc(10% - 20px);
+	}
 }

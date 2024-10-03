@@ -1,3 +1,5 @@
+"use strict"
+
 // header functionality //
 const video = document.querySelector(".video_play");
 const vidBtns = document.querySelectorAll(".vid-btn");
@@ -138,7 +140,6 @@ const burgerItems = [
 ];
 const gridContainer = document.querySelector(".grid_menu");
 const searchItems = document.getElementById("search");
-console.log(gridContainer);
 
 window.addEventListener("DOMContentLoaded", function () {
   menuItems(burgerItems);
@@ -209,7 +210,6 @@ function menuButtons() {
 const menuSearch_Items = document.getElementById("search");
 
 menuSearch_Items.addEventListener("keyup", function (event) {
-  console.log(event.target.value);
   let targetedItem = event.target.value;
   searchItemFunction(targetedItem);
 });
@@ -225,10 +225,24 @@ function searchItemFunction(search) {
       return items.name.includes(search);
     });
     menuItems(searchFilter);
-  } else {
-    console.log("not working");
   }
 }
+
+// menu card modal
+
+// let menuCardModal = `
+//    <div class="menu_card">
+//       <div class="burger_image">
+//        <img src=${burgerItems[0].img} alt="image">
+//      </div>                 
+//       <div class="description">
+//        <h2 class="item_heading">${burgerItems[0].name}</h2>
+//         <p class="item_para">${burgerItems[0].description}</p>
+//         <p class="price">${burgerItems[0].price}</p>
+//       </div>
+//     </div>
+// ` 
+// console.log(menuCardModal);
 
 // menu counter update functionality
 const updateCounter = document.querySelectorAll(".update_counter");
